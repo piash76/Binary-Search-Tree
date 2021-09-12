@@ -9,6 +9,9 @@
 ///implemantion delete
 ///https://www.youtube.com/watch?v=gcULXE7ViZw
 
+
+///https://www.youtube.com/watch?v=JdmAYw5h3G8
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -146,21 +149,7 @@ Node* inorder_successor(Node *cur,Node *root)
         while(temp->data!=cur->data)
         {
             if(cur->data<temp->data)
-                temp=temp->left;
-            }
-            else
             {
-                temp=temp->right;
-            }
-        }
-
-
-        return last_par;
-
-    }
-}
-
-      {
                 last_par=temp;
 
                 temp=temp->left;
@@ -188,7 +177,7 @@ int main()
     inorder(root);
     cout<<endl;
 
-   Node *temp=searching(root,34);
+   Node *temp=searching(root,36);
 
    Node *succ=inorder_successor(temp,root);
 
