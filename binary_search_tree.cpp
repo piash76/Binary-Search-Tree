@@ -9,6 +9,9 @@
 ///implemantion delete
 ///https://www.youtube.com/watch?v=gcULXE7ViZw
 
+///inorder successor
+///https://www.youtube.com/watch?v=JdmAYw5h3G8
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -139,6 +142,7 @@ void postorder(Node* cur_node)
 
 }
 
+///for deletion
 
 Node* getmin(Node *cur)
 {
@@ -208,7 +212,6 @@ Node* deleting(Node *cur,int val)
 ///inorder succesor of a node is the node that comes after  in in-order traversal
 ///min of right subtree
 
-
 Node* searching(Node* cur,int val)
 {
     if(cur==NULL) return NULL;
@@ -262,21 +265,7 @@ Node* inorder_successor(Node *cur,Node *root)
         while(temp->data!=cur->data)
         {
             if(cur->data<temp->data)
-                temp=temp->left;
-            }
-            else
             {
-                temp=temp->right;
-            }
-        }
-
-
-        return last_par;
-
-    }
-}
-
-      {
                 last_par=temp;
 
                 temp=temp->left;
@@ -292,6 +281,7 @@ Node* inorder_successor(Node *cur,Node *root)
 
     }
 }
+
 
 
 
